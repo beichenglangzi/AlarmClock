@@ -63,7 +63,6 @@ static AlarmTool * _instance = nil;
             timeV = timeV + 36000*24;
             pTime = [NSDate dateWithTimeIntervalSince1970:timeV];
         }else{//当天提醒
-//            pTime = model.timeValue;
         }
         //只播放一次的需要进行关闭
         //注册通知
@@ -232,7 +231,7 @@ static AlarmTool * _instance = nil;
     //初始化
     UILocalNotification *locationNotification = [[UILocalNotification alloc] init];
     locationNotification.fireDate = date;
-    //NSLog(@"推送时间%@",locationNotification.fireDate);
+    NSLog(@"***********time**********%@",locationNotification.fireDate);
     locationNotification.timeZone = [NSTimeZone defaultTimeZone];
     //设置重复周期
     locationNotification.repeatInterval = isRpeat ? NSCalendarUnitWeekday : 0;

@@ -33,6 +33,7 @@
 		4C22EE381F3846D5008F8AAE /* Cell_ClockInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C22EE261F3846D5008F8AAE /* Cell_ClockInfo.xib */; };
 		4C22EE391F3846D5008F8AAE /* Cell_Week.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C22EE281F3846D5008F8AAE /* Cell_Week.m */; };
 		4C22EE3A1F3846D5008F8AAE /* Cell_Week.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C22EE291F3846D5008F8AAE /* Cell_Week.xib */; };
+		4C652F6D1F39B4970012EB2B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C652F6C1F39B4970012EB2B /* AudioToolbox.framework */; };
 		AAE9AB3F4306C440486668FB /* libPods-AlarmClock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B89FDC6ACE003E0C509FAB67 /* libPods-AlarmClock.a */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +85,7 @@
 		4C22EE291F3846D5008F8AAE /* Cell_Week.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cell_Week.xib; sourceTree = "<group>"; };
 		4C22EE3B1F38475D008F8AAE /* AlarmClock.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AlarmClock.pch; path = AlarmClock/AlarmClock.pch; sourceTree = "<group>"; };
 		4C22EE3E1F3849FF008F8AAE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = AlarmClock/Info.plist; sourceTree = "<group>"; };
+		4C652F6C1F39B4970012EB2B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		4CE069F11F3305BF00633BC3 /* AlarmClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlarmClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B89FDC6ACE003E0C509FAB67 /* libPods-AlarmClock.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AlarmClock.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB7072871F87C1163C9DD3A1 /* Pods-AlarmClock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlarmClock.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlarmClock/Pods-AlarmClock.release.xcconfig"; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C652F6D1F39B4970012EB2B /* AudioToolbox.framework in Frameworks */,
 				AAE9AB3F4306C440486668FB /* libPods-AlarmClock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,6 +107,7 @@
 		26C52BFBD45F657235E49AEE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4C652F6C1F39B4970012EB2B /* AudioToolbox.framework */,
 				B89FDC6ACE003E0C509FAB67 /* libPods-AlarmClock.a */,
 			);
 			name = Frameworks;
