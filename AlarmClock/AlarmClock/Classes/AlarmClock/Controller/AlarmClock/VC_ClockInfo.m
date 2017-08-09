@@ -19,6 +19,8 @@
 @interface VC_ClockInfo ()<UITableViewDataSource,
 UITableViewDelegate>{
     UITextField *_temTxt;//备注信息
+    
+    ClockDataModel *_clockModel;
 }
 
 @property (nonatomic, strong) UIDatePicker *datePicker;
@@ -79,7 +81,7 @@ static NSString * const cell_identity = @"Cell_ClockInfo";
             if (!stateArray || stateArray.count == 0) {
                 return ;
             }
-            weakSelf.clockModel.weeksStatus = stateArray;
+            _clockModel.weeksStatus = stateArray;
             [weakSelf.tableView reloadData];
         };
         [self.navigationController pushViewController:vcWeek animated:YES];
@@ -92,6 +94,9 @@ static NSString * const cell_identity = @"Cell_ClockInfo";
     if (bnt.tag == 0) {//返回
         [self.navigationController popViewControllerAnimated:YES];
     }else{//存储
+        if (self.clockmodel) {//如果之前的存在就将其移除
+            [[AlarmTool sharedSingleton] cancelNotification:self.clockmodel];
+        }
         _clockModel.markString = _temTxt.text;
         _clockModel.isOpen = YES;
         //添加通知
@@ -114,6 +119,7 @@ static NSString * const cell_identity = @"Cell_ClockInfo";
 
 #pragma mark - private mehtods
 - (void)initData{
+    _clockModel = self.clockmodel;
     if (!_clockModel) {
         _clockModel = [ClockDataModel new];
     }

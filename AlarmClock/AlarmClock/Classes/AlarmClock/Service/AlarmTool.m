@@ -156,7 +156,7 @@ static AlarmTool * _instance = nil;
     int days = 0;
     
     temp = newWeekDay - (int)components.weekday;
-    days = (temp >= 0 ? temp+1 : temp + 8);
+    days = (temp >= 0 ? temp : temp + 7);
     NSDate *newFireDate = [[[NSCalendar currentCalendar] dateFromComponents:comps] dateByAddingTimeInterval:3600 * 24 * days];
     return newFireDate;
 }

@@ -168,7 +168,7 @@ static NSString * const cell_idnentity = @"Cell_AlarmClock";
     [_bntEidt setTitle:@"编辑" forState:UIControlStateNormal];
     [self.tableView setEditing:NO animated:YES];
     VC_ClockInfo *clockInfo = [[VC_ClockInfo alloc] initWithNibName:@"VC_ClockInfo" bundle:nil];
-    clockInfo.clockModel =  tag == 0 ? nil : self.dataArray[indx];
+    clockInfo.clockmodel =  tag == 0 ? nil : self.dataArray[indx];
     clockInfo.vc_tag = tag;
     clockInfo.index = indx;
     clockInfo.updateViewBlock = ^(NSArray *datas) {

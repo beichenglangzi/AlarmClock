@@ -21,7 +21,7 @@ typedef void(^UpdateViewWithDataBlock)(NSArray *datas);
  */
 @property (nonatomic, assign) int vc_tag;
 @property (nonatomic, assign) NSInteger index;
-@property (nonatomic, strong) ClockDataModel *clockModel;
+@property (nonatomic, strong) ClockDataModel *clockmodel;
 
 @property (nonatomic, copy) UpdateViewWithDataBlock updateViewBlock;
 
